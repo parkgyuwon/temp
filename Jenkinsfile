@@ -10,7 +10,7 @@ pipeline {
       AWS_ACCESS_KEY_ID = credentials('awsAccessKeyId')
       AWS_SECRET_ACCESS_KEY = credentials('awsSecretAccessKey')
       AWS_DEFAULT_REGION = 'ap-northeast-2'
-      HOME = '.' // Avoid npm root owned
+      HOME = '.' // Avoid npm root owned root owned
     }
 
     stages {
@@ -21,9 +21,9 @@ pipeline {
             steps {
                 echo 'Clonning Repository'
 
-                git url: 'https://github.com/frontalnh/temp.git',
+                git url: 'https://github.com/parkgyuwon/temp.git',
                     branch: 'master',
-                    credentialsId: 'jenkinsgit'
+                    credentialsId: 'tokenForJenkins'
             }
 
             post {
